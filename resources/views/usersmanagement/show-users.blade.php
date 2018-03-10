@@ -128,6 +128,11 @@
                                                 </a>
                                             </td>
                                             <td>
+                                              @if($user_role->name=='Unverified')
+                                              <a class="btn btn-sm btn-success btn-block" href="users/{{$user->id}}/vf" data-toggle="tooltip" title="Show">
+                                                  <i class="fa fa-check fa-fw" aria-hidden="true"></i> <span class="hidden-xs hidden-sm">Verify</span><span class="hidden-xs hidden-sm hidden-md"> User</span>
+                                              </a>
+                                              @else
                                                 <a class="btn btn-sm btn-info btn-block" href="{{ URL::to('users/' . $user->id . '/edit') }}" data-toggle="tooltip" title="Edit">
                                                     <i class="fa fa-pencil fa-fw" aria-hidden="true"></i> <span class="hidden-xs hidden-sm">Edit</span><span class="hidden-xs hidden-sm hidden-md"> User</span>
                                                 </a>

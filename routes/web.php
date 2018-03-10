@@ -14,7 +14,11 @@
 */
 
 // Homepage Route
-Route::get('/', 'WelcomeController@welcome')->name('welcome');
+Route::get('/', 'WelcomeController@newdish');
+Route::get('/test', 'WelcomeController@dhishawelcome');
+Route::post('/donorlist', 'bdonoController@snd');
+Route::post('/getfeed','fbackController@getfeeb');
+Route::get('/donate','WelcomeController@don');
 
 // Authentication Routes
 Auth::routes();
@@ -124,6 +128,12 @@ Route::group(['middleware' => ['auth', 'activated', 'role:admin', 'activity', 't
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
     Route::get('routes', 'AdminDetailsController@listRoutes');
     Route::get('active-users', 'AdminDetailsController@activeUsers');
+    Route::get('users/{uid}/uvf','uvfyController@uvf' );
+    Route::get('users/{uid}/vf','uvfyController@vf' );
+    Route::get('delfeeb/{$abc}','fbackController@delfeeb' );
 });
 
 Route::redirect('/php', '/phpinfo', 301);
+
+// Route::get('delfeeb/{$abc}','fbackController@delfeeb' );
+  Route::get('feedback', 'fbackController@putfeeb' );

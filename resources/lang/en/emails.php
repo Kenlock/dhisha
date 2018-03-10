@@ -13,25 +13,25 @@ return [
     |
     */
 
-    /*
+    /**
      * Activate new user account email.
      *
      */
 
     'activationSubject'  => 'Activation required',
     'activationGreeting' => 'Welcome!',
-    'activationMessage'  => 'You need to activate your email before you can start using all of our services.',
+    'activationMessage'  => 'You need to confirm your email before the admins can verify your credentials',
     'activationButton'   => 'Activate',
-    'activationThanks'   => 'Thank you for using our application!',
+    'activationThanks'   => 'We look forward to your help',
 
-    /*
+    /**
      * Goobye email.
      *
      */
-    'goodbyeSubject'  => 'Sorry to see you go...',
-    'goodbyeGreeting' => 'Hello :username,',
-    'goodbyeMessage'  => 'We are very sorry to see you go. We wanted to let you know that your account has been deleted. Thank for the time we shared. You have '.config('settings.restoreUserCutoff').' days to restore your account.',
-    'goodbyeButton'   => 'Restore Account',
-    'goodbyeThanks'   => 'We hope to see you again!',
+    'goodbyeSubject'    => 'Sorry to see you go...',
+    'goodbyeGreeting'   => 'Hello :username,',
+    'goodbyeMessage'    => 'We are very sorry to see you go. We wanted to let you know that your account has been deleted. Thank for the time we shared. You have ' . config('settings.restoreUserCutoff') . ' days to restore your account.',
+    'goodbyeButton'     => 'Restore Account',
+    'goodbyeThanks'     => 'We hope to see you again!',
 
 ];

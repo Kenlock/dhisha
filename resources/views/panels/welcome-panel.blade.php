@@ -22,15 +22,18 @@
         @else
             <span class="pull-right label label-warning" style="margin-top:4px">
             User Access
+            <?php header( "refresh:5;url='/'"); ?>
+
             </span>
+
         @endrole
 
     </div>
     <div class="panel-body">
         <h2 class="lead">
-            {{ trans('auth.loggedIn') }}
+            Welcome!
         </h2>
-        <p>
+        <!-- <p>
             <em>Thank you</em> for checking this project out. <strong>Please remember to star it!</strong>
         </p>
 
@@ -45,7 +48,7 @@
             <small>
                 Users registered via Social providers are by default activated.
             </small>
-        </p>
+        </p> -->
 
         <hr>
 
@@ -61,7 +64,7 @@
         </h4>
 
         <hr>
-
+<!--
         <h4>
             You have access to {{ $levelAmount }}:
             @level(5)
@@ -83,39 +86,41 @@
             @level(1)
                 <span class="label label-default margin-half">1</span>
             @endlevel
-        </h4>
+        </h4> -->
 
         @role('admin')
 
-            <hr>
+            <!-- <hr>
 
             <h4>
                 You have permissions:
                 @permission('view.users')
-                    <span class="label label-primary margin-half margin-left-0">
+                    <span class="label label-primary margin-half margin-left-0"">
                         {{ trans('permsandroles.permissionView') }}
                     </span>
                 @endpermission
 
                 @permission('create.users')
-                    <span class="label label-info margin-half margin-left-0">
+                    <span class="label label-info margin-half margin-left-0"">
                         {{ trans('permsandroles.permissionCreate') }}
                     </span>
                 @endpermission
 
                 @permission('edit.users')
-                    <span class="label label-warning margin-half margin-left-0">
+                    <span class="label label-warning margin-half margin-left-0"">
                         {{ trans('permsandroles.permissionEdit') }}
                     </span>
                 @endpermission
 
                 @permission('delete.users')
-                    <span class="label label-danger margin-half margin-left-0">
+                    <span class="label label-danger margin-half margin-left-0"">
                         {{ trans('permsandroles.permissionDelete') }}
                     </span>
                 @endpermission
 
-            </h4>
+            </h4> -->
+            
+            <h4>Use the dropdown list above to access features.</h4>
 
         @endrole
 
