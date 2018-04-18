@@ -14,6 +14,13 @@ class Bdonomig extends Migration
     public function up()
     {
         //
+        Schema::create('donors', function (Blueprint $table){
+          $table->increments('id');
+          $table->string('name');
+          $table->string('bloodgroup');
+          $table->string('place');
+          $table->string('phno');
+      });
     }
 
     /**
@@ -24,5 +31,6 @@ class Bdonomig extends Migration
     public function down()
     {
         //
+        Schema::drop('donors');
     }
 }
